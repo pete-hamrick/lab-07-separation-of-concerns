@@ -10,7 +10,7 @@ jest.mock('twilio', () => () => ({
     },
 }));
 
-describe('03_separation-of-concerns-demo routes', () => {
+describe('separation of concerns lab', () => {
     beforeEach(() => {
         return setup(pool);
     });
@@ -51,11 +51,5 @@ describe('03_separation-of-concerns-demo routes', () => {
                     },
                 ]);
             });
-        //navigate to localhost
-        //hits app.js > app.use
-        //hits controllers/orders.js
-        //create get here?
-        //call orderService static returnOrders sending a message saying here are all orders
-        //or use Order class, static return orders
     });
 });
