@@ -52,4 +52,14 @@ describe('separation of concerns lab', () => {
                 ]);
             });
     });
+    it('gets an order by id', () => {
+        return request(app)
+            .get('/api/v1/orders/2')
+            .then((res) => {
+                expect(res.body).toEqual({
+                    id: '2',
+                    quantity: 6,
+                });
+            });
+    });
 });
