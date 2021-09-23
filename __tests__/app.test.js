@@ -74,4 +74,15 @@ describe('separation of concerns lab', () => {
                 });
             });
     });
+
+    it('should DELETE an order by id', () => {
+        return request(app)
+            .delete('/api/v1/orders/2')
+            .then((res) => {
+                expect(res.body).toEqual({
+                    id: '2',
+                    quantity: 6,
+                });
+            });
+    });
 });
