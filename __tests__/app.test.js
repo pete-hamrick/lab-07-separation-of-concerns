@@ -62,4 +62,16 @@ describe('separation of concerns lab', () => {
                 });
             });
     });
+
+    it('should PATCH an order by id and returns the updated order', () => {
+        return request(app)
+            .patch('/api/v1/orders/2')
+            .send({ quantity: 9 })
+            .then((res) => {
+                expect(res.body).toEqual({
+                    id: '2',
+                    quantity: 9,
+                });
+            });
+    });
 });
